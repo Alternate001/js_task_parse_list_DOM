@@ -2,17 +2,17 @@
 
 const listOrigin = document.querySelector('ul');
 
+function convertor(salary) {
+  return Number(salary);
+}
+
 function sortList(list) {
   const items = [...list.querySelectorAll('li')];
 
   items.sort((a, b) => {
-    return Number(b.dataset.salary) - Number(a.dataset.salary);
+    return convertor(a.dataset.salary) - convertor(b.dataset.salary);
   });
   list.append(...items);
-}
-
-function convertor(salary) {
-  return Number(salary);
 }
 
 function getEmployees(list) {
