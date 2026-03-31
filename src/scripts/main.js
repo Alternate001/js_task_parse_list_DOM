@@ -10,7 +10,7 @@ function sortList(list) {
   const items = [...list.querySelectorAll('li')];
 
   items.sort((a, b) => {
-    return convertor(a.dataset.salary) - convertor(b.dataset.salary);
+    return convertor(b.dataset.salary) - convertor(a.dataset.salary);
   });
   list.append(...items);
 }
