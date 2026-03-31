@@ -11,6 +11,10 @@ function sortList(list) {
   list.append(...items);
 }
 
+function convertor(salary) {
+  return Number(salary);
+}
+
 function getEmployees(list) {
   const items = Array.from(list.querySelectorAll('li'));
 
@@ -18,7 +22,7 @@ function getEmployees(list) {
     return {
       name: item.dataset.name,
       position: item.dataset.position,
-      salary: Number(item.dataset.salary),
+      salary: convertor(item.dataset.salary),
       age: Number(item.dataset.age),
     };
   });
