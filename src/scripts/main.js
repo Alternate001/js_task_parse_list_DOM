@@ -3,10 +3,14 @@
 const listOrigin = document.querySelector('ul');
 
 function convertor(salary) {
-  return Number(salary);
+  return Number(salary.replace(/\D+/g, ''));
 }
 
 function sortList(list) {
+  if (!list) {
+    return;
+  }
+
   const items = [...list.querySelectorAll('li')];
 
   items.sort((a, b) => {
